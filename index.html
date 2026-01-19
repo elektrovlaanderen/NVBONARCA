@@ -1,0 +1,400 @@
+<!--
+Voorlopige landingspagina voor NVbonarca.com
+Gebruik: maak een repo (bv. nvbonarca-site) en zet dit bestand als /index.html.
+Zet je logo in dezelfde map als dit bestand en noem het: logo.jpg
+(Alternatief: pas de bestandsnaam hieronder aan.)
+-->
+<!doctype html>
+<html lang="nl-BE">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NV Bonarca | Installations • Dak & Gevel • Renovaties • IT</title>
+  <meta name="description" content="NV Bonarca: Vending machine installations, dak- en gevelwerken, container/tiny house, renovaties & techniek, sales & IT." />
+  <meta name="theme-color" content="#0b0f14" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="NV Bonarca" />
+  <meta property="og:description" content="Installations • Dak & Gevel • Renovaties • IT" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo.jpg" />
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#101722;
+      --text:#e8eef7;
+      --muted:#a9b6c7;
+      --line:#1b2736;
+      --gold:#d4b56f;
+      --gold2:#b8964b;
+      --ok:#35d07f;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --max: 1100px;
+      --pad: clamp(18px, 3vw, 28px);
+      font-synthesis-weight:none;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      background:
+        radial-gradient(1200px 700px at 15% 10%, rgba(212,181,111,.18), transparent 55%),
+        radial-gradient(900px 600px at 80% 0%, rgba(53,208,127,.10), transparent 52%),
+        linear-gradient(180deg, #070a0f, #0b0f14);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px var(--pad) 56px;}
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; padding:18px 0 10px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      text-decoration:none;
+    }
+    .brand small{
+      display:block; color:var(--muted); font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+    }
+    .nav{
+      display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end;
+      color:var(--muted); font-size:14px;
+    }
+    .nav a{ text-decoration:none; padding:8px 10px; border-radius:999px; border:1px solid transparent; }
+    .nav a:hover{ border-color:var(--line); background:rgba(255,255,255,.02); color:var(--text); }
+
+    .hero{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    @media (max-width: 920px){
+      .hero{grid-template-columns:1fr; }
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .card-inner{ padding: 26px; }
+    @media (max-width: 520px){
+      .card-inner{ padding: 20px; }
+    }
+
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(212,181,111,.35);
+      background: rgba(212,181,111,.08);
+      color: var(--text);
+      font-size: 13px;
+      letter-spacing:.02em;
+    }
+    .dot{width:7px; height:7px; border-radius:99px; background:var(--ok); box-shadow:0 0 0 4px rgba(53,208,127,.12);}
+    h1{
+      margin:14px 0 10px;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height:1.08;
+      letter-spacing:-.02em;
+    }
+    .lead{color:var(--muted); font-size: clamp(15px, 1.5vw, 18px); margin:0 0 16px;}
+    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px;}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      text-decoration:none;
+      font-weight:600;
+      background: rgba(255,255,255,.03);
+    }
+    .btn:hover{ background: rgba(255,255,255,.06); }
+    .btn.primary{
+      border-color: rgba(212,181,111,.55);
+      background: linear-gradient(180deg, rgba(212,181,111,.20), rgba(184,150,75,.12));
+    }
+    .btn.primary:hover{
+      background: linear-gradient(180deg, rgba(212,181,111,.26), rgba(184,150,75,.16));
+    }
+
+    .logo-box{
+      display:flex; flex-direction:column; gap:12px;
+      padding: 22px;
+      height:100%;
+    }
+    .logo{
+      width:min(360px, 100%);
+      aspect-ratio:1/1;
+      border-radius: 18px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.25);
+      display:block;
+      object-fit:cover;
+      margin: 0 auto;
+    }
+    .badge-grid{
+      display:grid; grid-template-columns:1fr 1fr; gap:10px;
+      margin-top: 8px;
+    }
+    .badge{
+      border:1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 12px;
+      background: rgba(255,255,255,.02);
+    }
+    .badge strong{display:block; font-size:13px;}
+    .badge span{display:block; color:var(--muted); font-size:12px; margin-top:3px;}
+
+    section{ margin-top: 18px; }
+    .section-title{
+      display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+      padding: 0 2px;
+      margin: 20px 0 12px;
+    }
+    .section-title h2{ margin:0; font-size: 18px; letter-spacing:-.01em; }
+    .section-title p{ margin:0; color:var(--muted); font-size:14px; }
+
+    .grid{
+      display:grid; gap:12px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+    .col-6{grid-column:span 6;}
+    .col-4{grid-column:span 4;}
+    .col-12{grid-column:span 12;}
+    @media (max-width: 920px){
+      .col-6,.col-4{grid-column:span 12;}
+    }
+
+    .item{
+      padding: 18px;
+      border-radius: 18px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.02);
+      height:100%;
+    }
+    .item h3{ margin:0 0 6px; font-size:16px;}
+    .item p{ margin:0; color:var(--muted); font-size:14px;}
+    .list{
+      margin:10px 0 0; padding:0 0 0 18px;
+      color: var(--muted); font-size:14px;
+    }
+    .list li{ margin: 6px 0; }
+    footer{
+      margin-top: 26px;
+      padding-top: 18px;
+      border-top:1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+    }
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#top" aria-label="NV Bonarca">
+        <div>
+          <div style="font-weight:800; letter-spacing:.02em;">NV Bonarca</div>
+          <small>NVbonarca.com</small>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Navigatie">
+        <a href="#diensten">Diensten</a>
+        <a href="#aanpak">Aanpak</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top" class="hero">
+      <div class="card">
+        <div class="card-inner">
+          <div class="kicker"><span class="dot" aria-hidden="true"></span> Beschikbaar voor nieuwe opdrachten</div>
+          <h1>Installaties, dak- & gevelwerken, renovatie en IT — onder één dak.</h1>
+          <p class="lead">
+            NV Bonarca levert betrouwbare uitvoering met duidelijke afspraken: van vending machine installations tot renovaties & techniek,
+            en ondersteuning in sales & IT.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="#contact">Offerte aanvragen</a>
+            <a class="btn" href="#diensten">Bekijk diensten</a>
+          </div>
+
+          <div style="margin-top:18px; color:var(--muted); font-size:13px;">
+            Werkregio: <span class="mono">België</span> (aanpasbaar) • Reactietijd: <span class="mono">binnen 24u</span> (aanpasbaar)
+          </div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <div class="logo-box">
+          <img class="logo" src="logo.jpg" alt="NV Bonarca logo" />
+          <div class="badge-grid">
+            <div class="badge">
+              <strong>Vending machine installations</strong>
+              <span>Installatie, plaatsing, service</span>
+            </div>
+            <div class="badge">
+              <strong>Algemene dak & gevelwerken</strong>
+              <span>Herstelling, onderhoud, afwerking</span>
+            </div>
+            <div class="badge">
+              <strong>Container / Tiny house</strong>
+              <span>Opbouw, techniek, oplevering</span>
+            </div>
+            <div class="badge">
+              <strong>Renovations & techniek</strong>
+              <span>Coördinatie, uitvoering, nazorg</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <section id="diensten">
+      <div class="section-title">
+        <h2>Diensten</h2>
+        <p>Een heldere scope, correcte planning, strak resultaat.</p>
+      </div>
+
+      <div class="grid">
+        <div class="col-6">
+          <div class="item">
+            <h3>Vending machine installations</h3>
+            <p>Installatie en integratie van vending machines met focus op veiligheid, netheid en betrouwbaarheid.</p>
+            <ul class="list">
+              <li>Plaatsing & aansluiting (stroom/netwerk waar relevant)</li>
+              <li>Test & oplevering</li>
+              <li>Service en interventies op afspraak</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="item">
+            <h3>Algemene dak- & gevelwerken</h3>
+            <p>Herstellingen en onderhoud met duurzame materialen en nette afwerking.</p>
+            <ul class="list">
+              <li>Inspectie en gerichte herstellingen</li>
+              <li>Waterdichting, afwerking, detailwerk</li>
+              <li>Preventief onderhoud</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="item">
+            <h3>Container / Tiny house</h3>
+            <p>Technische opbouw en praktische realisatie van compacte woon- en werkoplossingen.</p>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="item">
+            <h3>Renovaties & techniek</h3>
+            <p>Van voorbereiding tot oplevering: efficiënt, netjes en met duidelijke communicatie.</p>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="item">
+            <h3>Sales & IT</h3>
+            <p>Ondersteuning bij processen, tooling en praktische IT-oplossingen voor kleine teams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="aanpak">
+      <div class="section-title">
+        <h2>Aanpak</h2>
+        <p>Transparant, stapsgewijs, zonder verrassingen.</p>
+      </div>
+
+      <div class="grid">
+        <div class="col-4">
+          <div class="item">
+            <h3>1) Intake</h3>
+            <p>Je doel, timing en randvoorwaarden scherpstellen. Waar nodig: plaatsbezoek.</p>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="item">
+            <h3>2) Offerte</h3>
+            <p>Duidelijke scope, materialen en planning. Geen ruis, wel afspraken.</p>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="item">
+            <h3>3) Uitvoering</h3>
+            <p>Net werk, regelmatige updates, oplevering met korte checklist en nazorg.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>Vul dit later aan met echte gegevens.</p>
+      </div>
+
+      <div class="grid">
+        <div class="col-12">
+          <div class="item">
+            <p style="margin:0 0 10px; color:var(--muted);">
+              Zet hier je e-mail en telefoon. Als je wil, kan ik dit ook meteen omzetten naar een eenvoudig contactformulier.
+            </p>
+            <div class="grid" style="gap:10px;">
+              <div class="col-6">
+                <div class="badge">
+                  <strong>E-mail</strong>
+                  <span><a href="mailto:info@nvbonarca.com">info@nvbonarca.com</a> (placeholder)</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="badge">
+                  <strong>Telefoon</strong>
+                  <span><a href="tel:+32000000000">+32 0 00 00 00 00</a> (placeholder)</span>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="badge">
+                  <strong>Werkregio</strong>
+                  <span>België (aanpasbaar) • Op afspraak</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cta-row" style="margin-top:14px;">
+              <a class="btn primary" href="mailto:info@nvbonarca.com?subject=Offerte%20NV%20Bonarca">Mail voor offerte</a>
+              <a class="btn" href="#top">Terug naar boven</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> NV Bonarca. Alle rechten voorbehouden.</div>
+      <div class="mono">nvbonarca.com • voorlopige landing</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
