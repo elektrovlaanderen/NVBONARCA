@@ -1,21 +1,25 @@
 <!--
-Voorlopige landingspagina voor NVbonarca.com
-Gebruik: maak een repo (bv. nvbonarca-site) en zet dit bestand als /index.html.
-Zet je logo in dezelfde map als dit bestand en noem het: logo.jpg
-(Alternatief: pas de bestandsnaam hieronder aan.)
+NVbonarca.com – aangepaste voorlopige landingspagina
+Plaats je logo in dezelfde map als dit bestand en noem het: logo.jpg
+(Als de bestandsnaam anders is, pas de src hieronder aan.)
+
+Aanbevolen repo-structuur:
+/
+  index.html
+  logo.jpg
 -->
 <!doctype html>
 <html lang="nl-BE">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NV Bonarca | Installations • Dak & Gevel • Renovaties • IT</title>
-  <meta name="description" content="NV Bonarca: Vending machine installations, dak- en gevelwerken, container/tiny house, renovaties & techniek, sales & IT." />
+  <title>NV Bonarca | Familiebedrijf met een visie</title>
+  <meta name="description" content="NV Bonarca: meer dan 25 jaar expertise in dak- en gevelwerken, containerwoningen, vending machines, techniek, IT en sales." />
   <meta name="theme-color" content="#0b0f14" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="NV Bonarca" />
-  <meta property="og:description" content="Installations • Dak & Gevel • Renovaties • IT" />
+  <meta property="og:title" content="NV Bonarca – Familiebedrijf met een visie" />
+  <meta property="og:description" content="Meer dan 25 jaar vakmanschap in bouw, techniek en innovatie." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="logo.jpg" />
 
@@ -31,9 +35,8 @@ Zet je logo in dezelfde map als dit bestand en noem het: logo.jpg
       --ok:#35d07f;
       --shadow: 0 18px 60px rgba(0,0,0,.45);
       --radius: 18px;
-      --max: 1100px;
+      --max: 1120px;
       --pad: clamp(18px, 3vw, 28px);
-      font-synthesis-weight:none;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -45,7 +48,7 @@ Zet je logo in dezelfde map als dit bestand en noem het: logo.jpg
         radial-gradient(900px 600px at 80% 0%, rgba(53,208,127,.10), transparent 52%),
         linear-gradient(180deg, #070a0f, #0b0f14);
       color:var(--text);
-      line-height:1.5;
+      line-height:1.55;
     }
     a{color:inherit}
     .wrap{max-width:var(--max); margin:0 auto; padding:24px var(--pad) 56px;}
@@ -53,30 +56,20 @@ Zet je logo in dezelfde map als dit bestand en noem het: logo.jpg
       display:flex; align-items:center; justify-content:space-between;
       gap:16px; padding:18px 0 10px;
     }
-    .brand{
-      display:flex; align-items:center; gap:12px;
-      text-decoration:none;
-    }
-    .brand small{
-      display:block; color:var(--muted); font-size:12px; letter-spacing:.08em; text-transform:uppercase;
-    }
-    .nav{
-      display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end;
-      color:var(--muted); font-size:14px;
-    }
+    .brand{display:flex; align-items:center; gap:12px; text-decoration:none;}
+    .brand small{display:block; color:var(--muted); font-size:12px; letter-spacing:.08em; text-transform:uppercase;}
+    .nav{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end; color:var(--muted); font-size:14px;}
     .nav a{ text-decoration:none; padding:8px 10px; border-radius:999px; border:1px solid transparent; }
     .nav a:hover{ border-color:var(--line); background:rgba(255,255,255,.02); color:var(--text); }
 
     .hero{
       margin-top:18px;
       display:grid;
-      grid-template-columns: 1.1fr .9fr;
+      grid-template-columns: 1.15fr .85fr;
       gap:22px;
       align-items:stretch;
     }
-    @media (max-width: 920px){
-      .hero{grid-template-columns:1fr; }
-    }
+    @media (max-width: 920px){ .hero{grid-template-columns:1fr;} }
 
     .card{
       background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
@@ -86,9 +79,7 @@ Zet je logo in dezelfde map als dit bestand en noem het: logo.jpg
       overflow:hidden;
     }
     .card-inner{ padding: 26px; }
-    @media (max-width: 520px){
-      .card-inner{ padding: 20px; }
-    }
+    @media (max-width: 520px){ .card-inner{ padding: 20px; } }
 
     .kicker{
       display:inline-flex; align-items:center; gap:10px;
@@ -103,11 +94,12 @@ Zet je logo in dezelfde map als dit bestand en noem het: logo.jpg
     .dot{width:7px; height:7px; border-radius:99px; background:var(--ok); box-shadow:0 0 0 4px rgba(53,208,127,.12);}
     h1{
       margin:14px 0 10px;
-      font-size: clamp(30px, 4vw, 48px);
-      line-height:1.08;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height:1.1;
       letter-spacing:-.02em;
     }
-    .lead{color:var(--muted); font-size: clamp(15px, 1.5vw, 18px); margin:0 0 16px;}
+    .lead{color:var(--muted); font-size: clamp(15px, 1.5vw, 18px); margin:0 0 14px;}
+
     .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px;}
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:10px;
@@ -115,7 +107,7 @@ Zet je logo in dezelfde map als dit bestand en noem het: logo.jpg
       border-radius: 14px;
       border:1px solid var(--line);
       text-decoration:none;
-      font-weight:600;
+      font-weight:650;
       background: rgba(255,255,255,.03);
     }
     .btn:hover{ background: rgba(255,255,255,.06); }
@@ -127,11 +119,7 @@ Zet je logo in dezelfde map als dit bestand en noem het: logo.jpg
       background: linear-gradient(180deg, rgba(212,181,111,.26), rgba(184,150,75,.16));
     }
 
-    .logo-box{
-      display:flex; flex-direction:column; gap:12px;
-      padding: 22px;
-      height:100%;
-    }
+    .logo-box{display:flex; flex-direction:column; gap:12px; padding:22px; height:100%;}
     .logo{
       width:min(360px, 100%);
       aspect-ratio:1/1;
@@ -142,10 +130,8 @@ Zet je logo in dezelfde map als dit bestand en noem het: logo.jpg
       object-fit:cover;
       margin: 0 auto;
     }
-    .badge-grid{
-      display:grid; grid-template-columns:1fr 1fr; gap:10px;
-      margin-top: 8px;
-    }
+
+    .badge-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top: 6px;}
     .badge{
       border:1px solid var(--line);
       border-radius: 14px;
@@ -159,15 +145,12 @@ Zet je logo in dezelfde map als dit bestand en noem het: logo.jpg
     .section-title{
       display:flex; align-items:baseline; justify-content:space-between; gap:12px;
       padding: 0 2px;
-      margin: 20px 0 12px;
+      margin: 22px 0 12px;
     }
     .section-title h2{ margin:0; font-size: 18px; letter-spacing:-.01em; }
     .section-title p{ margin:0; color:var(--muted); font-size:14px; }
 
-    .grid{
-      display:grid; gap:12px;
-      grid-template-columns: repeat(12, 1fr);
-    }
+    .grid{display:grid; gap:12px; grid-template-columns: repeat(12, 1fr);}
     .col-6{grid-column:span 6;}
     .col-4{grid-column:span 4;}
     .col-12{grid-column:span 12;}
@@ -184,11 +167,17 @@ Zet je logo in dezelfde map als dit bestand en noem het: logo.jpg
     }
     .item h3{ margin:0 0 6px; font-size:16px;}
     .item p{ margin:0; color:var(--muted); font-size:14px;}
-    .list{
-      margin:10px 0 0; padding:0 0 0 18px;
-      color: var(--muted); font-size:14px;
-    }
+    .list{ margin:10px 0 0; padding:0 0 0 18px; color: var(--muted); font-size:14px; }
     .list li{ margin: 6px 0; }
+
+    .quote{
+      border-left: 3px solid rgba(212,181,111,.55);
+      padding-left: 14px;
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
     footer{
       margin-top: 26px;
       padding-top: 18px;
@@ -206,13 +195,14 @@ Zet je logo in dezelfde map als dit bestand en noem het: logo.jpg
     <header>
       <a class="brand" href="#top" aria-label="NV Bonarca">
         <div>
-          <div style="font-weight:800; letter-spacing:.02em;">NV Bonarca</div>
-          <small>NVbonarca.com</small>
+          <div style="font-weight:850; letter-spacing:.02em;">NV Bonarca</div>
+          <small>nvbonarca.com</small>
         </div>
       </a>
       <nav class="nav" aria-label="Navigatie">
+        <a href="#visie">Visie</a>
         <a href="#diensten">Diensten</a>
-        <a href="#aanpak">Aanpak</a>
+        <a href="#toekomst">Toekomst</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -220,21 +210,28 @@ Zet je logo in dezelfde map als dit bestand en noem het: logo.jpg
     <main id="top" class="hero">
       <div class="card">
         <div class="card-inner">
-          <div class="kicker"><span class="dot" aria-hidden="true"></span> Beschikbaar voor nieuwe opdrachten</div>
-          <h1>Installaties, dak- & gevelwerken, renovatie en IT — onder één dak.</h1>
+          <div class="kicker"><span class="dot" aria-hidden="true"></span> Familiebedrijf • 25+ jaar expertise</div>
+
+          <h1>Welkom bij NV Bonarca – Een familiebedrijf met een visie.</h1>
+
           <p class="lead">
-            NV Bonarca levert betrouwbare uitvoering met duidelijke afspraken: van vending machine installations tot renovaties & techniek,
-            en ondersteuning in sales & IT.
+            Bij NV Bonarca combineren we een rijk verleden met een blik op de toekomst. Als een trots familiebedrijf bouwen we al meer dan
+            25 jaar aan onze reputatie, waarbij elke stap wordt gezet met toewijding, expertise en een duidelijke visie.
+          </p>
+
+          <p class="lead" style="margin-top:-6px;">
+            Wij geloven in het leveren van uitzonderlijke kwaliteit, van de fundering van een project tot de kleinste technologische details.
           </p>
 
           <div class="cta-row">
-            <a class="btn primary" href="#contact">Offerte aanvragen</a>
-            <a class="btn" href="#diensten">Bekijk diensten</a>
+            <a class="btn primary" href="#contact">Contacteer ons</a>
+            <a class="btn" href="#diensten">Bekijk onze diensten</a>
           </div>
 
-          <div style="margin-top:18px; color:var(--muted); font-size:13px;">
-            Werkregio: <span class="mono">België</span> (aanpasbaar) • Reactietijd: <span class="mono">binnen 24u</span> (aanpasbaar)
-          </div>
+          <p class="quote">
+            “Bij NV Bonarca is elke klant deel van onze familie. We bouwen niet alleen aan structuren, maar ook aan duurzame relaties,
+            gedreven door onze gezamenlijke ambitie om marktleider te worden.”
+          </p>
         </div>
       </div>
 
@@ -243,103 +240,120 @@ Zet je logo in dezelfde map als dit bestand en noem het: logo.jpg
           <img class="logo" src="logo.jpg" alt="NV Bonarca logo" />
           <div class="badge-grid">
             <div class="badge">
-              <strong>Vending machine installations</strong>
-              <span>Installatie, plaatsing, service</span>
+              <strong>Dak- & gevelwerken</strong>
+              <span>Vakmanschap met focus op afwerking</span>
             </div>
             <div class="badge">
-              <strong>Algemene dak & gevelwerken</strong>
-              <span>Herstelling, onderhoud, afwerking</span>
+              <strong>Containerwoningen</strong>
+              <span>Op maat, praktisch en innovatief</span>
             </div>
             <div class="badge">
-              <strong>Container / Tiny house</strong>
-              <span>Opbouw, techniek, oplevering</span>
+              <strong>Vending machines</strong>
+              <span>Unieke ervaring, sterke techniek</span>
             </div>
             <div class="badge">
-              <strong>Renovations & techniek</strong>
-              <span>Coördinatie, uitvoering, nazorg</span>
+              <strong>IT & Sales</strong>
+              <span>Oplossingen, groei en toekomstvisie</span>
             </div>
           </div>
         </div>
       </aside>
     </main>
 
-    <section id="diensten">
+    <section id="visie">
       <div class="section-title">
-        <h2>Diensten</h2>
-        <p>Een heldere scope, correcte planning, strak resultaat.</p>
+        <h2>Onze visie</h2>
+        <p>Traditie en innovatie, samen in één groep.</p>
       </div>
 
       <div class="grid">
-        <div class="col-6">
+        <div class="col-12">
           <div class="item">
-            <h3>Vending machine installations</h3>
-            <p>Installatie en integratie van vending machines met focus op veiligheid, netheid en betrouwbaarheid.</p>
-            <ul class="list">
-              <li>Plaatsing & aansluiting (stroom/netwerk waar relevant)</li>
-              <li>Test & oplevering</li>
-              <li>Service en interventies op afspraak</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-6">
-          <div class="item">
-            <h3>Algemene dak- & gevelwerken</h3>
-            <p>Herstellingen en onderhoud met duurzame materialen en nette afwerking.</p>
-            <ul class="list">
-              <li>Inspectie en gerichte herstellingen</li>
-              <li>Waterdichting, afwerking, detailwerk</li>
-              <li>Preventief onderhoud</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-4">
-          <div class="item">
-            <h3>Container / Tiny house</h3>
-            <p>Technische opbouw en praktische realisatie van compacte woon- en werkoplossingen.</p>
-          </div>
-        </div>
-
-        <div class="col-4">
-          <div class="item">
-            <h3>Renovaties & techniek</h3>
-            <p>Van voorbereiding tot oplevering: efficiënt, netjes en met duidelijke communicatie.</p>
-          </div>
-        </div>
-
-        <div class="col-4">
-          <div class="item">
-            <h3>Sales & IT</h3>
-            <p>Ondersteuning bij processen, tooling en praktische IT-oplossingen voor kleine teams.</p>
+            <p>
+              Onze groep is gegroeid vanuit een passie voor vakmanschap, van het traditionele werk in <strong>dak- en gevelwerken</strong>
+              tot de innovatieve <strong>bouw van op maat gemaakte containerwoningen</strong>.
+            </p>
+            <p style="margin-top:10px;">
+              Onze expertise reikt verder dan de bouw: wij omarmen de toekomst met geavanceerde <strong>vending machines</strong>,
+              ondersteund door een sterke technische tak. Deze systemen bieden een unieke ervaring en zijn een perfect voorbeeld van
+              onze drive voor vernieuwing.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="aanpak">
+    <section id="diensten">
       <div class="section-title">
-        <h2>Aanpak</h2>
-        <p>Transparant, stapsgewijs, zonder verrassingen.</p>
+        <h2>Diensten</h2>
+        <p>Heldere scope, correcte planning, strak resultaat.</p>
       </div>
 
       <div class="grid">
-        <div class="col-4">
+        <div class="col-6">
           <div class="item">
-            <h3>1) Intake</h3>
-            <p>Je doel, timing en randvoorwaarden scherpstellen. Waar nodig: plaatsbezoek.</p>
+            <h3>Dak- & gevelwerken</h3>
+            <p>Traditioneel vakmanschap met duurzame oplossingen en nette oplevering.</p>
+            <ul class="list">
+              <li>Inspectie, herstellingen en onderhoud</li>
+              <li>Waterdichting, afwerking en detailwerk</li>
+              <li>Duidelijke afspraken en opvolging</li>
+            </ul>
           </div>
         </div>
-        <div class="col-4">
+
+        <div class="col-6">
           <div class="item">
-            <h3>2) Offerte</h3>
-            <p>Duidelijke scope, materialen en planning. Geen ruis, wel afspraken.</p>
+            <h3>Containerwoningen op maat</h3>
+            <p>Innovatieve bouwoplossingen: functioneel, schaalbaar en op maat van je noden.</p>
+            <ul class="list">
+              <li>Concept en praktische realisatie</li>
+              <li>Technische integratie en oplevering</li>
+              <li>Afwerking afgestemd op gebruik</li>
+            </ul>
           </div>
         </div>
+
         <div class="col-4">
           <div class="item">
-            <h3>3) Uitvoering</h3>
-            <p>Net werk, regelmatige updates, oplevering met korte checklist en nazorg.</p>
+            <h3>Vending machines & techniek</h3>
+            <p>Installatie, integratie en technische ondersteuning voor systemen die een unieke ervaring bieden.</p>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="item">
+            <h3>IT-oplossingen</h3>
+            <p>We ondersteunen processen en digitale oplossingen die je werking versterken en klaarstomen voor groei.</p>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="item">
+            <h3>Sales & toekomstgerichte projecten</h3>
+            <p>Met focus op sales, dienstverlening en onze toekomstige <strong>webshop</strong> bouwen we verder aan marktleiderschap.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="toekomst">
+      <div class="section-title">
+        <h2>Toekomst</h2>
+        <p>Vooroplopen met techniek, IT en klantbeleving.</p>
+      </div>
+
+      <div class="grid">
+        <div class="col-12">
+          <div class="item">
+            <p>
+              Door onze toewijding aan <strong>IT-oplossingen</strong> en een focus op <strong>sales</strong>, inclusief onze toekomstige
+              <strong>webshop</strong>, zorgen we ervoor dat we altijd voorop lopen. We werken doelgericht aan vernieuwing, efficiëntie en
+              een consistente klantbeleving.
+            </p>
+            <p style="margin-top:10px;">
+              We staan voor kwaliteit op elk niveau: van constructie en afwerking tot technische implementatie en nazorg.
+            </p>
           </div>
         </div>
       </div>
@@ -355,8 +369,9 @@ Zet je logo in dezelfde map als dit bestand en noem het: logo.jpg
         <div class="col-12">
           <div class="item">
             <p style="margin:0 0 10px; color:var(--muted);">
-              Zet hier je e-mail en telefoon. Als je wil, kan ik dit ook meteen omzetten naar een eenvoudig contactformulier.
+              Voeg hier je e-mail, telefoon en regio toe. Indien gewenst kan dit ook een contactformulier worden.
             </p>
+
             <div class="grid" style="gap:10px;">
               <div class="col-6">
                 <div class="badge">
@@ -379,7 +394,7 @@ Zet je logo in dezelfde map als dit bestand en noem het: logo.jpg
             </div>
 
             <div class="cta-row" style="margin-top:14px;">
-              <a class="btn primary" href="mailto:info@nvbonarca.com?subject=Offerte%20NV%20Bonarca">Mail voor offerte</a>
+              <a class="btn primary" href="mailto:info@nvbonarca.com?subject=Aanvraag%20NV%20Bonarca">Mail ons</a>
               <a class="btn" href="#top">Terug naar boven</a>
             </div>
           </div>
